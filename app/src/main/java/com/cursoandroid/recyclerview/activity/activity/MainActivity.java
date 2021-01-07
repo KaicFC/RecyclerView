@@ -22,10 +22,12 @@ public class MainActivity extends AppCompatActivity {
         //configurar o Adapter
 
 
+
+
         //Configurar o recyclerView
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext()); // LinearLayout ou GridLayout
         recyclerView.setLayoutManager(layoutManager);
-        recyclerView.setHasFixedSize(true);
+        recyclerView.setHasFixedSize(true); //Recomendação Google
         //recyclerView.setAdapter(adaptador);
 
     }
