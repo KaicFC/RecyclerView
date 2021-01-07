@@ -119,6 +119,30 @@ public class MainActivity extends AppCompatActivity {
         filme = new Filme("Capitão América: Guerra Civil", "Ação/Aventura", "2016");
         this.listaFilme.add(filme);
 
+        filme = new Filme("Vingadores: Era de Ultron", "Ação/Aventura", "2015");
+        this.listaFilme.add(filme);
+
+        filme = new Filme("Thor: O Mundo Sombrio", "Ação/Fantasia", "2013");
+        this.listaFilme.add(filme);
+
+        filme = new Filme("Capitão América 2: O Soldado Invernal", "Ação/Aventura", "2014");
+        this.listaFilme.add(filme);
+
+        filme = new Filme("Homem-Formiga e a Vespa", "Ação/Aventura", "2018");
+        this.listaFilme.add(filme);
+
+        filme = new Filme("Homem de Ferro 3", "Ação/Aventura", "2013");
+        this.listaFilme.add(filme);
+
+        filme = new Filme("Homem-Formiga", "Ação/Aventura", "2015");
+        this.listaFilme.add(filme);
+
+        filme = new Filme("O Incrível Hulk", "Ação/Fantasia", "2008");
+        this.listaFilme.add(filme);
+
+        filme = new Filme("Homem de Ferro", "Ação/Aventura", "2006");
+        this.listaFilme.add(filme);
+
     }
 
 }
