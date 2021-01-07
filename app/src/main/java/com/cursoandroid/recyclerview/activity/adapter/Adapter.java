@@ -9,8 +9,17 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.cursoandroid.recyclerview.R;
+import com.cursoandroid.recyclerview.activity.model.Filme;
+
+import java.util.List;
 
 public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
+
+    private List<Filme> listaFilmes;
+
+    public Adapter(List<Filme> lista) {
+        this.listaFilmes = lista;
+    }
 
     @NonNull
     @Override
@@ -25,17 +34,20 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
     }
 
     @Override
-    //Exibe os ítens,
+    //Exibe os ítens recuperados numa posição.
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        holder.titulo.setText("Título teste");
-        holder.genero.setText("Comédia");
-        holder.ano.setText("2017");
+
+        //Exibir o filme pela posição
+        Filme filme = listaFilmes.get(position);
+        holder.titulo.setText(filme.getTituloFilme());
+        holder.genero.setText(filme.getGenero());
+        holder.ano.setText(filme.getAno());
     }
 
     @Override
     //Quantidade de ítens que serão exibidos
     public int getItemCount() {
-        return 5;
+        return listaFilmes.size();
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder{

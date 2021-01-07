@@ -1,10 +1,12 @@
 package com.cursoandroid.recyclerview.activity.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.widget.LinearLayout;
 
 import com.cursoandroid.recyclerview.R;
 import com.cursoandroid.recyclerview.activity.adapter.Adapter;
@@ -30,13 +32,14 @@ public class MainActivity extends AppCompatActivity {
         this.criarFilmes();
 
         //configurar o Adapter
-        Adapter adapter = new Adapter();
+        Adapter adapter = new Adapter( listaFilme);
 
         //Configurar o recyclerView
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
         // LinearLayout ou GridLayout
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setHasFixedSize(true); //Recomendação Google
+        recyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayout.VERTICAL)); //Criar o divisor para cada linearlayout Vertical
         recyclerView.setAdapter(adapter); // Adapter instanciado
 
     }
